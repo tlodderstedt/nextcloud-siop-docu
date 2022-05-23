@@ -69,6 +69,7 @@
                 }
             },
             "constraints": {
+                "limit_disclosure": "required",
                 "fields": [
                     {
                         "path": [
@@ -92,12 +93,12 @@
                     },
                     {
                         "path": [
-                            "$.credentialSubject.given_name"
+                            "$.credentialSubject.givenName"
                         ]
                     },
                     {
                         "path": [
-                            "$.credentialSubject.family_name"
+                            "$.credentialSubject.familyName"
                         ]
                     }
                 ]
