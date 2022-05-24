@@ -1,0 +1,62 @@
+{
+    "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/bbs/v1"
+    ],
+    "type": [
+        "VerifiablePresentation"
+    ],
+    "verifiableCredential": [
+        {
+            "@context": [
+                "https://www.w3.org/2018/credentials/v1",
+                "https://w3id.org/security/bbs/v1"
+            ],
+            "id": "urn:bnid:_:12345",
+            "type": [
+                "NextcloudCredential",
+                "VerifiableCredential"
+            ],
+            "credentialSubject": {
+                "id": "did:key:zUC7...",
+                "email": "alice@example.com",
+                "givenName": "Alice",
+                "familyName": "Wonderland"
+            },
+            "issuanceDate": "2022-05-04T14:02:18.038768400Z",
+            "issuer": "did:key:zUC7...",
+            "proof": {
+                "type": "BbsBlsSignatureProof2020",
+                "nonce": "22456608037449564223",
+                "proofValue": "ABQPgw+lP2mqaGVWEixIFBOK...",
+                "verificationMethod": "did:key:zUC7...",
+                "proofPurpose": "assertionMethod",
+                "created": "2022-05-04T14:02:17.825947+00:00"
+            }
+        }
+    ],
+    "presentation_submission": {
+        "descriptor_map": [
+            {
+                "id": "NextcloudCredentialLDP",
+                "path": "$",
+                "format": "ldp_vp",
+                "path_nested": {
+                    "id": "NextcloudCredentialLDP",
+                    "path": "$.verifiableCredential[0]",
+                    "format": "ldp_vc"
+                }
+            }
+        ],
+        "definition_id": "NextcloudCombinedRequest",
+        "id": "NexcloudCredentialPresentationSubmission"
+    },
+    "proof": {
+        "type": "BbsBlsSignature2020",
+        "verificationMethod": "did:key:zUC7...",
+        "created": "2022-05-04T14:02:36.045015+00:00",
+        "proofPurpose": "authentication",
+        "challenge": "c17e7680-2030-42ae-95d4-ef9ef320f8f6",
+        "proofValue": "ic+D4kqdKypmMLfpMIES..."
+    }
+}
