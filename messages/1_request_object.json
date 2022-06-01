@@ -85,12 +85,8 @@
                                 ],
                                 "filter": {
                                     "type": "array",
-                                    "items": {
-                                        "type": "string",
-                                        "enum": [
-                                            "NextcloudCredential",
-                                            "VerifiableCredential"
-                                        ]
+                                    "contains": {
+                                        "const": "NextcloudCredential"
                                     }
                                 }
                             },
