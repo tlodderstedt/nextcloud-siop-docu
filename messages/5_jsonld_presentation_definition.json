@@ -1,0 +1,16 @@
+{
+    "descriptor_map": [
+        {
+            "id": "NextcloudCredentialLDP",
+            "path": "$",
+            "format": "ldp_vp",
+            "path_nested": {
+                "id": "NextcloudCredentialLDP",
+                "path": "$.verifiableCredential[0]",
+                "format": "ldp_vc"
+            }
+        }
+    ],
+    "definition_id": "NextcloudCombinedRequest",
+    "id": "NexcloudCredentialPresentationSubmission"
+}

@@ -1,115 +1,112 @@
 {
-    "response_type": "id_token",
+    "response_type": "vp_token",
     "client_id": "https://5779-2a02-8070-27ba-5100-8158-e3bc-da6c-6529.ngrok.io/index.php/apps/oidc_login/oidc/callback",
-    "scope": "openid",
     "response_mode": "post",
     "redirect_uri": "https://5779-2a02-8070-27ba-5100-8158-e3bc-da6c-6529.ngrok.io/index.php/apps/oidc_login/oidc/callback",
     "nonce": "22456608037449564223",
-    "claims": {
-        "vp_token": {
-            "id": "NextcloudCombinedRequest",
-            "submission_requirements": [
-                {
-                    "name": "NextcloudCredential",
-                    "rule": "pick",
-                    "count": 1,
-                    "from": "A"
-                }
-            ],
-            "input_descriptors": [
-                {
-                    "id": "NextcloudCredentialAC",
-                    "group": [
-                        "A"
-                    ],
-                    "format": {
-                        "ac_vc": {
-                            "proof_type": [
-                                "CLSignature2019"
-                            ]
-                        }
-                    },
-                    "constraints": {
-                        "limit_disclosure": "required",
-                        "fields": [
-                            {
-                                "path": [
-                                    "$.schema_id"
-                                ],
-                                "filter": {
-                                    "type": "string",
-                                    "const": "did:indy:idu:test:3QowxFtwciWceMFr7WbwnM:2:BasicScheme:0.1"
-                                }
-                            },
-                            {
-                                "path": [
-                                    "$.values.email"
-                                ]
-                            },
-                            {
-                                "path": [
-                                    "$.values.given_name"
-                                ]
-                            },
-                            {
-                                "path": [
-                                    "$.values.family_name"
-                                ]
-                            }
+    "presentation_definition": {
+        "id": "NextcloudCombinedRequest",
+        "submission_requirements": [
+            {
+                "name": "NextcloudCredential",
+                "rule": "pick",
+                "count": 1,
+                "from": "A"
+            }
+        ],
+        "input_descriptors": [
+            {
+                "id": "NextcloudCredentialAC",
+                "group": [
+                    "A"
+                ],
+                "format": {
+                    "ac_vc": {
+                        "proof_type": [
+                            "CLSignature2019"
                         ]
                     }
                 },
-                {
-                    "id": "NextcloudCredentialLDP",
-                    "group": [
-                        "A"
-                    ],
-                    "format": {
-                        "ldp_vc": {
-                            "proof_type": [
-                                "BbsBlsSignature2020"
+                "constraints": {
+                    "limit_disclosure": "required",
+                    "fields": [
+                        {
+                            "path": [
+                                "$.schema_id"
+                            ],
+                            "filter": {
+                                "type": "string",
+                                "const": "did:indy:idu:test:3QowxFtwciWceMFr7WbwnM:2:BasicScheme:0.1"
+                            }
+                        },
+                        {
+                            "path": [
+                                "$.values.email"
                             ]
                         },
-                        "ldp_vp": {
-                            "proof_type": [
-                                "BbsBlsSignature2020"
+                        {
+                            "path": [
+                                "$.values.given_name"
+                            ]
+                        },
+                        {
+                            "path": [
+                                "$.values.family_name"
                             ]
                         }
+                    ]
+                }
+            },
+            {
+                "id": "NextcloudCredentialLDP",
+                "group": [
+                    "A"
+                ],
+                "format": {
+                    "ldp_vc": {
+                        "proof_type": [
+                            "BbsBlsSignature2020"
+                        ]
                     },
-                    "constraints": {
-                        "limit_disclosure": "required",
-                        "fields": [
-                            {
-                                "path": [
-                                    "$.type"
-                                ],
-                                "filter": {
-                                    "type": "array",
-                                    "contains": {
-                                        "const": "NextcloudCredential"
-                                    }
-                                }
-                            },
-                            {
-                                "path": [
-                                    "$.credentialSubject.email"
-                                ]
-                            },
-                            {
-                                "path": [
-                                    "$.credentialSubject.givenName"
-                                ]
-                            },
-                            {
-                                "path": [
-                                    "$.credentialSubject.familyName"
-                                ]
-                            }
+                    "ldp_vp": {
+                        "proof_type": [
+                            "BbsBlsSignature2020"
                         ]
                     }
+                },
+                "constraints": {
+                    "limit_disclosure": "required",
+                    "fields": [
+                        {
+                            "path": [
+                                "$.type"
+                            ],
+                            "filter": {
+                                "type": "array",
+                                "contains": {
+                                    "const": "NextcloudCredential"
+                                }
+                            }
+                        },
+                        {
+                            "path": [
+                                "$.credentialSubject.email"
+                            ]
+                        },
+                        {
+                            "path": [
+                                "$.credentialSubject.givenName"
+                            ]
+                        },
+                        {
+                            "path": [
+                                "$.credentialSubject.familyName"
+                            ]
+                        }
+                    ]
                 }
-            ]
-        }
+            }
+        ]
     },
     "registration": {
         "subject_identifier_types_supported": [

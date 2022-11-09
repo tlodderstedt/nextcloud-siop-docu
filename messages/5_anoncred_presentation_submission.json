@@ -1,0 +1,16 @@
+{
+  "descriptor_map": [
+    {
+      "id": "NextcloudCredentialAC",
+      "path": "$",
+      "format": "ac_vp",
+      "path_nested": {
+        "id": "NextcloudCredentialAC",
+        "path": "$.requested_proof.revealed_attr_groups.NextcloudCredentialAC",
+        "format": "ac_vp"
+      }
+    }
+  ],
+  "definition_id": "NextcloudCombinedRequest",
+  "id": "NexcloudCredentialPresentationSubmission"
+}
