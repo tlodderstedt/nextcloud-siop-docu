@@ -109,9 +109,6 @@
         ]
     },
     "registration": {
-        "subject_identifier_types_supported": [
-            "jkt"
-        ],
         "vp_formats": {
             "ac_vp": {
                 "proof_type": [
@@ -128,10 +125,6 @@
                     "BbsBlsSignature2020"
                 ]
             }
-        },
-        "id_token_signing_alg_values_supported": [
-            "ES384",
-            "RS256"
-        ]
+        }
     }
 }
