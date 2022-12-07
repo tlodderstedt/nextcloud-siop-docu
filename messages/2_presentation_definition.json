@@ -1,5 +1,5 @@
 {
-    "id": "NextcloudCombinedRequest",
+    "id": "d76c51b7-ea90-49bb-8368-6b3d194fc130",
     "submission_requirements": [
         {
             "name": "NextcloudCredential",
@@ -14,25 +14,14 @@
             "group": [
                 "A"
             ],
-            "format": {
-                "ac_vc": {
-                    "proof_type": [
-                        "CLSignature2019"
-                    ]
+            "schema": [
+                {
+                    "uri": "did:indy:idu:test:3QowxFtwciWceMFr7WbwnM:2:BasicScheme:0.1"
                 }
-            },
+            ],
             "constraints": {
                 "limit_disclosure": "required",
                 "fields": [
-                    {
-                        "path": [
-                            "$.schema_id"
-                        ],
-                        "filter": {
-                            "type": "string",
-                            "const": "did:indy:idu:test:3QowxFtwciWceMFr7WbwnM:2:BasicScheme:0.1"
-                        }
-                    },
                     {
                         "path": [
                             "$.values.email"
@@ -56,37 +45,14 @@
             "group": [
                 "A"
             ],
-            "format": {
-                "ldp_vc": {
-                    "proof_type": [
-                        "BbsBlsSignature2020"
-                    ]
-                },
-                "ldp_vp": {
-                    "proof_type": [
-                        "BbsBlsSignature2020"
-                    ]
+            "schema": [
+                {
+                    "uri": "https://idunion.org/nextcloud-credential.json"
                 }
-            },
+            ],
             "constraints": {
                 "limit_disclosure": "required",
                 "fields": [
-                    {
-                        "path": [
-                            "$.type"
-                        ],
-                        "filter": {
-                            "type": "array",
-                            "contains": {
-                                "const": "NextcloudCredential"
-                            }
-                        }
-                    },
-                    {
-                        "path": [
-                            "$.credentialSubject.email"
-                        ]
-                    },
                     {
                         "path": [
                             "$.credentialSubject.givenName"
