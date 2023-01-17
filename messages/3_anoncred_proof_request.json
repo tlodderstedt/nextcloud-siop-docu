@@ -1,9 +1,9 @@
 {
     "nonce": "22456608037449564223",
-    "name": "NextcloudCombinedRequest",
+    "name": "NextcloudCredentialAC",
     "version": "1.0",
     "requested_attributes": {
-        "NextcloudCredentialAC": {
+        "ref2": {
             "names": [
                 "first_name",
                 "last_name",
