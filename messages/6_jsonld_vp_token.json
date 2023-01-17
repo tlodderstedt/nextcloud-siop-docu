@@ -27,7 +27,7 @@
             "issuer": "did:key:zUC7...",
             "proof": {
                 "type": "BbsBlsSignatureProof2020",
-                "nonce": "22456608037449564223",
+                "nonce": "c17e7680-2030-42ae-95d4-ef9ef320f8f6",
                 "proofValue": "ABQPgw+lP2mqaGVWEixIFBOK...",
                 "verificationMethod": "did:key:zUC7...",
                 "proofPurpose": "assertionMethod",
@@ -48,7 +48,7 @@
                 }
             }
         ],
-        "definition_id": "NextcloudCombinedRequest",
+        "definition_id": "d76c51b7-ea90-49bb-8368-6b3d194fc130",
         "id": "NexcloudCredentialPresentationSubmission"
     },
     "proof": {
@@ -56,7 +56,7 @@
         "verificationMethod": "did:key:zUC7...",
         "created": "2022-05-04T14:02:36.045015+00:00",
         "proofPurpose": "authentication",
-        "challenge": "c17e7680-2030-42ae-95d4-ef9ef320f8f6",
+        "challenge": "22456608037449564223",
         "proofValue": "ic+D4kqdKypmMLfpMIES..."
     }
 }
